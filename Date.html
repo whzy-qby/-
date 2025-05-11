@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date对象</title>
+</head>
+
+<body>
+    <script>
+
+
+        console.log(Date.now());//时间戳：从北京时间1970-1-1 8点整-至今的总秒数
+        console.log(new Date(Date.now()));//Mon Aug 05 2024 14:02:51 GMT+0800 (中国标准时间)
+        console.log(new Date());//同上，即参数是时间戳............................Sun May 11 2025 12:14:00 GMT+0800 (中国标准时间)
+        console.log("getTime():", new Date().getTime());//时间戳
+        console.log("getDate():", new Date().getDate());//日期
+        console.log("getDay():", new Date().getDay());//星期
+        console.log("getYear():", new Date().getYear());//年份-1900
+        console.log("getFullYear():", new Date().getFullYear());//年份（4位）
+        console.log("getMonth():", new Date().getMonth());//月份-1（0-11）
+        console.log("getHours():", new Date().getHours()); 0 - 23
+        console.log("getMinutes():", new Date().getMinutes()); 0 - 59
+        console.log("getSeconds():", new Date().getSeconds()); 0 - 59
+        console.log("getMilliseconds():", new Date().getMilliseconds());//毫秒数0-999
+        console.log("------------------------------------------------------------------------------------------------------");
+        //距离今年最后一天所剩的时间：
+        console.log("距离今年最后一天所剩的时间：");
+        var a = new Date(new Date().getFullYear(), 11, 31, 23, 59, 59, 999);
+        var b = a - new Date();
+        var c = b / 1000 / 60 / 60 / 24;
+        var d = Math.floor(c);
+        var e = (c - d) * 24;
+        console.log(d, "天，", e, "小时。");
+
+
+    </script>
+</body>
+
+</html>
