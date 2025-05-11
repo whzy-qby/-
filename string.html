@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+</head>
+<body>
+    <script>
+        var s1 = "卡卡罗特";
+        var s2 = "贝吉塔";
+        console.log("s1:",s1);
+        console.log("length:"+s1.length);
+        console.log("s1.charAt(2):",s1.charAt(2));
+        console.log("超出范围返回空串：s1.charAt(5):",s1.charAt(5));
+        var s3 = "比克";
+        console.log("s1.concat(\",\",s2,\",\",s3):",s1.concat(",",s2,",",s3));
+        console.log("\"\".concat(1,2,\"3\")=","".concat(1,2,"3"));
+        console.log("1+2+\"3\"=",1+2+"3");
+        var s4 = "弗利萨是一个突然变异的生命体。严格来说，弗利萨的父亲库尔德王是一个具有异常战斗力的突然变异体，弗利萨由他父亲自身无性繁殖而来，所以拥有了变异体的强大要素。";
+        console.log(s4.substring());//没有参数返回整个字符串，即第一个参数默认为0，第二个变量默认为length
+        console.log(s4.substring(15));//一个变量表示左端，即第二个变量默认为length
+        console.log(s4.substring(15,40));
+        console.log(s4.substr(15,5));//第二个参数表示截取的字符串长度
+        console.log(s4.substr(-15,5));//-15：从倒数第十五个开始截取
+        console.log(s4.substr(15,-5));//-5->0->返回空字符串
+        console.log(s4.indexOf("库尔德王"));//返回首次出现的索引
+        console.log(s4.indexOf("弗利萨父亲"));//找不到返回-1
+        s5 = " 贝吉特 悟吉塔   ";
+        console.log(s1.split(""));
+        console.log(s1.split("",2));//第二个参数表示分隔的个数
+        s6 = "雷速登|之|闪电|冲线";
+        console.log(s6.split("|"));
+        console.log(s5.trim());//去除两端空白
+        //ES6新增:
+        console.log(s5.trimEnd());//尾
+        console.log(s5.trimStart());//首
+        
+        
+</script>
+</body>
+</html>

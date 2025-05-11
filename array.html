@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+<body>
+    <script>
+        var a = [1,2,3,[1,2,3],"孙悟空","克林",true,,"x"];
+        console.log("a:",a);
+        console.log(a[3]);
+        console.log(a[-1]);
+        console.log(a[a.length+1]);
+        console.log(a[3][1]);
+        console.log("-------------------------------------------------------------------------------------------------------------");
+        for(var i in a){
+            console.log(a[i]);
+        }
+        console.log("-------------------------------------------------------------------------------------------------------------");
+        console.log(Array.isArray(a[3]));
+        console.log(Array.isArray(a[3][1]));
+        console.log("-------------------------------------------------------------------------------------------------------------");
+        a.push("贝吉塔");//尾部添加
+        console.log(a);
+        a[3].pop();//尾部删除
+        console.log(a[3]);
+        a[3].unshift(3);//首部添加
+        console.log(a[3]);
+        a.shift();//首部删除
+        console.log("a:",a);
+        console.log("-------------------------------------------------------------------------------------------------------------");
+        var a1 = [1,2,3,4];
+        var a2 = ["a","b","c","d"];
+        var a3 = ["悟空","八戒","沙僧","唐僧"];
+        console.log(a1.concat(a2,a3));
+        console.log(a1+a2+a3);//直接连接成字符串
+        console.log("-------------------------------------------------------------------------------------------------------------");
+        str = "dragonball";
+        console.log(str.split("").reverse().join(""));//字符串倒序：先转化为数组，倒序，再转化回字符串
+        console.log("-------------------------------------------------------------------------------------------------------------");
+        console.log(a.indexOf(1));//找不到返回-1
+        console.log(a.indexOf(2));//找到返回首次出现的位置
+        console.log(a.indexOf(2,1));//第二个参数表示位置，即从他之后开始查找
+    </script>
+</body>
+</html>
