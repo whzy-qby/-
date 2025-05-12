@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水平垂直居中</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box1 {
+      display: flex;
+      background-color: greenyellow;
+      justify-content: center; /* 水平居中 */
+      align-items: center; /*垂直居中*/
+    }
+    .box2 {
+      display: grid;
+      place-items: center; /*同时实现垂直和水平居中*/
+      place-content: center;/*默认以bottom居中，改为中心居中*/
+      background-color: lightblue;
+    }
+    .box1, .box2, .box3 {
+      width: 300px;
+      height: 300px;
+    }
+    .box11, .box21, .box32 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .box11 {
+      /* inline元素居中，包括文字，img，video，audio等（行高与容器保持一致） */
+      text-align: center;
+      font-size: 16px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-wrap: nowrap;
+      -webkett-line-clamp: 1;/*限制显示的行数*/
+      line-height: 100px;
+    }
+    .box3 {
+      position: relative;
+      background-color: pink;
+    }
+    .box31 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .box32 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);/*默认以左上角居中，向左上各移动盒子宽高的一半*/
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="box11">
+      <span>天下无敌贝吉特</span>
+    </div>
+  </div>
+  <div class="box2">
+    <div class="box21"></div>
+  </div>
+  <div class="box3">
+    <div class="box31"></div>
+    <div class="box32"></div>
+  </div>
+</body>
+</html>
