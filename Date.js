@@ -13,6 +13,9 @@ function parseIdCard(idCard) {
   const day = birthDate.substring(6, 8);
   const nowDay = new Date();
   obj.age = nowDay.getFullYear() - year;
+  if (nowDay.getMonth() + 1 < month || (nowDay.getMonth() + 1 === month && nowDay.getDate() < day)) {
+    obj.age -= 1;
+  }
   obj.birthday = `${year}-${month}-${day}`;
   obj.daysToNextBirthday = (new Date(nowDay.getFullYear() + 1, month - 1, day) - nowDay) / (1000 * 60 * 60 * 24);
   return obj;
