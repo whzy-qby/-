@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display: grid</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      /* height: 400px; */
+    }
+    .boreder {
+      border: 1px solid #000;
+    }
+    .left, .right {
+      background-color: #267488;
+    }
+    .main {
+      background-color: #f0f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left border">left</div>
+    <div class="main border">main</div>
+    <div class="right border">right</div>
+  </div>
+</body>
+</html>

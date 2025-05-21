@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position: absolute</title>
+  <style>
+    .container {
+      position: relative;
+    }
+    .boreder {
+      border: 1px solid #000;
+    }
+    .left, .right {
+      width:200px;
+      position: absolute;
+      top: 0;
+      background-color: #267488;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      right: 0;
+    }
+    .main {
+      background-color: #f0f;
+      margin: 0 200px;/*左与left宽度一样，右与right宽度一样*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left border">left</div>
+    <div class="main border">main</div>
+    <div class="right border">right</div>
+  </div>
+</body>
+</html>

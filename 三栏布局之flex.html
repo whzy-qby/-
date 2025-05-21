@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    .container {
+      display: flex;
+      /* height: 400px; */
+    }
+    .boreder {
+      border: 1px solid #000;
+    }
+    .left, .right {
+      width:200px;
+      background-color: #267488;
+    }
+    .main {
+      flex: 1;
+      background-color: #f0f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left border">left</div>
+    <div class="main border">main</div>
+    <div class="right border">right</div>
+  </div>
+</body>
+</html>
